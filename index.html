@@ -3930,6 +3930,9 @@ recommended minimum size per tag as specified in the following table.</p>
     and with x86-64 processors (see <a href="https://github.com/NVIDIA/mig-parted/issues/30">NVIDIA/mig-parted issue #30</a>).</p>
 </li>
 <li><code>shard</code>: total number of <a href="https://slurm.schedmd.com/gres.html#Sharding">Sharding</a> on the node. Sharding allows sharing the same GPU on multiple jobs. The total number of shards is evenly distributed across all GPUs on the node.</li>
+<li><code>features</code>: list of <a href="https://slurm.schedmd.com/slurm.conf.html#OPT_Features">features</a> on the node. This allows to select nodes based on the <code>--constraint</code> option. Example:
+    <div class="highlight"><pre><span></span><code>features = [&quot;skylake&quot;, &quot;nvidia&quot;]
+</code></pre></div></li>
 </ol>
 <p>The instance specifications are retrieved from the cloud provider data source, but it is possible to explicitly specify them.</p>
 <ol>
